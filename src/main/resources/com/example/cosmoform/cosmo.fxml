@@ -1,3 +1,24 @@
-<?import javafx.scene.layout.VBox?>
-<VBox fx:controller="com.example.cosmoform.HelloController" xmlns:fx="http://javafx.com/fxml">
-</VBox>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="checkIn" visible="false" layoutX="120.0" layoutY="298.0" mnemonicParsing="false" text="Checking-In" />
+            <Button fx:id="checkOut" visible="false" layoutX="381.0" layoutY="298.0" mnemonicParsing="false" text="Checking-Out" />
+            <Label fx:id="welcomeText" visible="false" layoutX="160.0" layoutY="32.0" text="Welcome To Cosmotology">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageFirst" visible="false" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="descriptionCosmo" visible="false" layoutX="218.0" layoutY="253.0" text="Welcome to the six seven page" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>
