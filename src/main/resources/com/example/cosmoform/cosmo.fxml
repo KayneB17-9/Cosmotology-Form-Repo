@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cosmoform.HelloController">
+
+   <VBox fx:id="homePage" alignment="CENTER" spacing="15" visible="false">
+      <Label fx:id="welcomeText" text="Welcome To Cosmetology">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageFirst" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="descriptionCosmo" text="Welcome to the six seven page" />
+      <HBox alignment="CENTER" spacing="20">
+         <Button fx:id="checkIn" text="Checking-In" />
+         <Button fx:id="checkOut" text="Checking-Out" />
+      </HBox>
+   </VBox>
+
+
+
+   <VBox fx:id="servicesPage" alignment="CENTER" spacing="10" visible="false">
+      <Label fx:id="schoolName" text="Worcester Technical High School" />
+      <Label fx:id="bruh1" text="1 Officer Manny Familia Way" />
+      <Label fx:id="bruh2" text="Worcester, MA 01605" />
+      <Label text="What Are You Getting Done Today?">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER_LEFT" maxWidth="200" spacing="8">
+         <CheckBox text="Perm" />
+         <CheckBox text="Color" />
+         <CheckBox text="Haircut / Style" />
+         <CheckBox text="Nails" />
+         <CheckBox text="Waxing" />
+         <CheckBox text="Other Services" />
+      </VBox>
+
+      <Button text="Continue" />
+   </VBox>
+
+   <VBox fx:id="consentPage" alignment="CENTER" spacing="10">
+
+      <Label fx:id="disclaimerAll" text="All Work In This School Is Done By Students">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <Label maxWidth="500" text="I recognize that students are performing the work done in this school and will be monitored by a licensed instructor. Therefore your patience and support is appreciated." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+
+      <Label text="Charge for materials used only, no charge for services." textAlignment="CENTER" >
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+
+      <GridPane alignment="CENTER" hgap="10" vgap="10">
+         <Label text="Client Print Name:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+         <TextField prefWidth="200.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+         <Label text="Client Electronic Signature:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+         <TextField visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+         <Label text="Date:" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+         <TextField prefWidth="73.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+
+      <Button text="Back" visible="false" />
+   </VBox>
+
+</StackPane>
