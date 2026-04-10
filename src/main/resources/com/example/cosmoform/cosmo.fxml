@@ -8,7 +8,7 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cosmoform.HelloController">
 
-   <VBox fx:id="homePage" alignment="CENTER" spacing="15" >
+   <VBox fx:id="homePage" alignment="CENTER" spacing="15" visible="false" >
       <Label fx:id="welcomeText" text="Welcome To Cosmetology">
          <font>
             <Font size="24.0" />
@@ -18,13 +18,13 @@
       <Label fx:id="descriptionCosmo" text="Welcome to the six seven page" />
       <HBox alignment="CENTER" spacing="20">
          <Button fx:id="checkIn" onAction="#goToConsent" text="Checking-In" />
-         <Button fx:id="checkOut" onAction="#goToConsent" text="Checking-Out" />
+         <Button fx:id="checkOut" onAction="#goToFeedback" text="Checking-Out" />
       </HBox>
    </VBox>
 
 
 
-   <VBox fx:id="servicesPage" alignment="CENTER" spacing="10" >
+   <VBox fx:id="servicesPage" alignment="CENTER" spacing="10" visible="false" >
       <Pane prefHeight="362.0" prefWidth="600.0">
          <children>
             <Label fx:id="schoolName" layoutX="11.0" layoutY="6.0" text="Worcester Technical High School" />
@@ -35,7 +35,7 @@
                <CheckBox text="Color" />
                <CheckBox text="Haircut / Style" />
                <CheckBox text="Nails" />
-               <CheckBox text="Waxing" />
+               <CheckBox text="Waxing"  />
                <CheckBox text="Other Services" />
             </VBox>
             <Label layoutX="105.0" layoutY="90.0" text="What Are You Getting Done Today?">
@@ -45,7 +45,7 @@
             </Label>
          </children></Pane>
 
-               <Button text="Continue" />
+               <Button text="Continue" onAction="#goHome"/>
    </VBox>
 
    <VBox fx:id="consentPage" alignment="CENTER" spacing="10" >
@@ -70,18 +70,18 @@
                </font>
             </Label>
       
-            <Button layoutX="30.0" layoutY="26.0" text="Back" />
+            <Button layoutX="30.0" layoutY="26.0" text="Back" onAction="#goHome" />
             <Label layoutX="85.0" layoutY="299.0" text="Client Print Name:" />
             <TextField layoutX="190.0" layoutY="295.0" prefHeight="25.0" prefWidth="238.0" />
             <Label layoutX="50.0" layoutY="345.0" text="Client Print Signature:" />
             <TextField layoutX="171.0" layoutY="341.0" />
             <TextField layoutX="396.0" layoutY="341.0" prefHeight="25.0" prefWidth="80.0" />
             <Label layoutX="361.0" layoutY="345.0" text="Date:" />
-            <Button layoutX="524.0" layoutY="26.0" mnemonicParsing="false" text="Next" />
+            <Button layoutX="524.0" layoutY="26.0" onAction="#goToServices" mnemonicParsing="false" text="Next" />
          </children>
       </Pane>
    </VBox>
-   <VBox fx:id="waxingWaiver" prefHeight="200.0" prefWidth="100.0">
+   <VBox fx:id="waxingWaiver" prefHeight="200.0" prefWidth="100.0" visible="false">
       <children>
          <Pane prefHeight="433.0" prefWidth="600.0">
             <children>
@@ -109,12 +109,11 @@
                <CheckBox layoutX="451.0" layoutY="201.0" mnemonicParsing="false" />
                <CheckBox layoutX="392.0" layoutY="254.0" mnemonicParsing="false" />
                <CheckBox layoutX="451.0" layoutY="254.0" mnemonicParsing="false" />
-               <Button layoutX="526.0" layoutY="14.0" mnemonicParsing="false" text="Submit" />
-               <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
+               <Button onAction="#goHome" layoutX="526.0" layoutY="14.0" mnemonicParsing="false" text="Submit" />
             </children></Pane>
       </children>
    </VBox>
-   <VBox fx:id="feedbackPage" prefHeight="440.0" prefWidth="600.0">
+   <VBox fx:id="feedbackPage" prefHeight="440.0" prefWidth="600.0" >
       <children>
          <Pane prefHeight="428.0" prefWidth="616.0">
             <children>
@@ -181,7 +180,7 @@
                <Line endX="374.5" endY="-6.0" layoutX="181.0" layoutY="250.0" startX="-141.5" startY="-6.0" />
                <Line endX="374.5" endY="-6.0" layoutX="180.0" layoutY="323.0" startX="-141.5" startY="-6.0" />
                <Line endX="374.5" endY="-6.0" layoutX="180.0" layoutY="206.0" startX="-141.5" startY="-6.0" />
-               <Button layoutX="520.0" layoutY="13.0" mnemonicParsing="false" text="Check-out" textFill="#242524" />
+               <Button onAction="#goHome" layoutX="520.0" layoutY="13.0" mnemonicParsing="false" text="Check-out" textFill="#242524" />
             </children></Pane>
       </children>
    </VBox>
