@@ -78,6 +78,15 @@ public class HelloController {
         consentPage.setVisible(false);
         consentPage.setManaged(false);
 
+        servicesPage.setVisible(false);
+        servicesPage.setManaged(false);
+
+        waxingWaiver.setVisible(false);
+        waxingWaiver.setManaged(false);
+
+        feedbackPage.setVisible(false);
+        feedbackPage.setManaged(false);
+
         // Show home page
         homePage.setVisible(true);
         homePage.setManaged(true);
