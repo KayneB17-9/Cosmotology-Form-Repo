@@ -16,7 +16,7 @@
       <ImageView fx:id="imageFirst" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="descriptionCosmo" text="Welcome to the six seven page" />
       <HBox alignment="CENTER" spacing="20">
-         <Button fx:id="checkIn" text="Checking-In" />
+         <Button fx:id="checkIn" onAction="#nextPage" text="Checking-In" />
          <Button fx:id="checkOut" text="Checking-Out" />
       </HBox>
    </VBox>
@@ -122,6 +122,9 @@
                   </font>
                </Label>
                <Label layoutX="126.0" layoutY="89.0" prefHeight="17.0" prefWidth="349.0" text="(1 = Really bad, 2 = Poor, 3 = Average, 4 = Good, 5 = Excellent)" wrapText="true" />
+               <Label layoutX="38.0" layoutY="129.0" text="How would you rate your visit today?" />
+               <Label layoutX="38.0" layoutY="158.0" text="How would you rate our service speed?" />
+               <Label layoutX="38.0" layoutY="200.0" text="How would you rate your stylist in being " />
             </children></Pane>
       </children>
    </VBox>
