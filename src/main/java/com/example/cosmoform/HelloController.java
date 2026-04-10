@@ -23,9 +23,15 @@ public class HelloController {
     @FXML
     private VBox homePage;
 
+    @FXML
+    private VBox waxingWaiver;
 
     @FXML
-    public void nextPage() {
+    private VBox feedbackPage;
+
+
+    @FXML
+    public void goToConsent() {
         // Hide home page
         homePage.setVisible(false);
         homePage.setManaged(false);
@@ -33,6 +39,24 @@ public class HelloController {
         // Show consent page
         consentPage.setVisible(true);
         consentPage.setManaged(true);
+    }
+
+    @FXML
+    public void goToServices(){
+        consentPage.setVisible(false);
+        consentPage.setManaged(false);
+
+        waxingWaiver.setVisible(true);
+        waxingWaiver.setManaged(true);
+    }
+
+    @FXML
+    public void goToFeedback(){
+        homePage.setVisible(false);
+        homePage.setManaged(false);
+
+        feedbackPage.setVisible(true);
+        feedbackPage.setVisible(true);
     }
 
     @FXML
