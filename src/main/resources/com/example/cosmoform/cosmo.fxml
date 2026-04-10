@@ -35,7 +35,7 @@
                <CheckBox text="Color" />
                <CheckBox text="Haircut / Style" />
                <CheckBox text="Nails" />
-               <CheckBox text="Waxing"  />
+               <CheckBox text="Waxing"  onAction="#goToWaxing"/>
                <CheckBox text="Other Services" />
             </VBox>
             <Label layoutX="105.0" layoutY="90.0" text="What Are You Getting Done Today?">
