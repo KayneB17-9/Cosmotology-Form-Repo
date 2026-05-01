@@ -13,9 +13,6 @@ public class HelloController {
 
 
 
-
-
-
     //   PAGES
     @FXML
     private Pane consentPage;
