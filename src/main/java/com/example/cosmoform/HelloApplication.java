@@ -1,4 +1,4 @@
-package com.example.cosmoform;
+ package com.example.cosmoform;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
