@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import org.w3c.dom.Text;
 
 public class HelloController {
 
@@ -30,6 +31,19 @@ public class HelloController {
     @FXML
     private VBox servicesPage;
 
+
+    @FXML
+    private TextField clientSignature;
+
+    @FXML
+    private TextField date;
+
+    @FXML
+    private TextField clientName;
+
+    @FXML
+    private Label validation;
+
     @FXML
     public void goToConsent() {
         // Hide home page
@@ -43,12 +57,21 @@ public class HelloController {
 
     @FXML
     public void goToServices(){
-        consentPage.setVisible(false);
-        consentPage.setManaged(false);
+        String text1 = clientSignature.getText();
+        String text2 = clientName.getText();
+        String text3 = date.getText();
+        String text4 = validation.getText();
 
-        servicesPage.setVisible(true);
-        servicesPage.setManaged(true);
-    }
+
+        if(text1.isEmpty() && text2.isEmpty() && text3.isEmpty()){
+            validation.setText("Please enter all necessary information.");
+        } else {
+            consentPage.setVisible(false);
+            consentPage.setManaged(false);
+            servicesPage.setVisible(true);
+            servicesPage.setManaged(true);
+
+    }}
 
     @FXML
     public void goToFeedback(){

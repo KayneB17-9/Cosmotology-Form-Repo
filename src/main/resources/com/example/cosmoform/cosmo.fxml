@@ -38,7 +38,7 @@
       <Pane prefHeight="416.0" prefWidth="600.0">
          <children>
       
-            <Label layoutX="126.0" layoutY="180.0" text="Charge for materials used only, no charge for services." textAlignment="CENTER">
+            <Label fx:id="validation" layoutX="133.0" layoutY="219.0" text="Charge for materials used only, no charge for services." textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -104,7 +104,7 @@
          <Pane prefHeight="428.0" prefWidth="616.0" style="-fx-background-color: pink;">
             <children>
                <Label layoutX="27.0" layoutY="17.0" text="Client Name: " />
-               <Label fx:id="ClientNameInFeedback" layoutX="106.0" layoutY="17.0" prefHeight="17.0" prefWidth="222.0" text="Placeholder for client's name" />
+               <Label fx:id="clientFeedbackName" layoutX="106.0" layoutY="17.0" prefHeight="17.0" prefWidth="222.0" text="Placeholder for client's name" />
                <Label layoutX="217.0" layoutY="34.0" text="Client Feedback ">
                   <font>
                      <Font size="24.0" />
