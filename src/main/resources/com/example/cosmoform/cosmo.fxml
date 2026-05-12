@@ -9,20 +9,22 @@
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cosmoform.HelloController">
 
 
-
-   <VBox fx:id="servicesPage" alignment="CENTER" spacing="10" style="-fx-background-color: pink;" visible="false">
+///  This page asks what kind of services are you getting done
+/// Then you choose the box based on which service will be done
+   <VBox fx:id="servicesPage" alignment="CENTER" spacing="10" style="-fx-background-color: pink;">
       <Pane prefHeight="362.0" prefWidth="600.0">
          <children>
             <Label fx:id="schoolName" layoutX="11.0" layoutY="6.0" prefWidth="174.0" text="Worcester Technical High School" />
             <Label fx:id="bruh1" layoutX="11.0" layoutY="23.0" text="1 Officer Manny Familia Way" />
             <Label fx:id="bruh2" layoutX="14.0" layoutY="40.0" text="Worcester, MA 01605" />
             <VBox alignment="CENTER_LEFT" layoutX="217.0" layoutY="125.0" maxWidth="200" prefHeight="244.0" prefWidth="200.0" spacing="8">
-               <CheckBox style="-fx-skin: pink;" text="Perm" wrapText="true" />
-               <CheckBox text="Color" />
-               <CheckBox text="Haircut / Style" />
-               <CheckBox text="Nails" />
-               <CheckBox onAction="#goToWaxing" text="Waxing" />
-               <CheckBox text="Other Services" />
+               <CheckBox text="Perm" wrapText="true" />
+               <CheckBox text="Color" wrapText="true" />
+               <CheckBox text="Haircut / Style" wrapText="true"/>
+               <CheckBox text="Nails" wrapText="true"/>
+               ///Waxing checkbox takes the client into the next page which is the waxing waiver page
+               <CheckBox onAction="#goToWaxing" text="Waxing" wrapText="true"/>
+               <CheckBox text="Other Services" wrapText="true"/>
             </VBox>
             <Label layoutX="105.0" layoutY="90.0" text="What Are You Getting Done Today?">
                <font>
@@ -99,7 +101,6 @@
             </children></Pane>
       </children>
    </VBox>
-   <VBox fx:id="feedbackPage" prefHeight="440.0" prefWidth="600.0">
       <children>
          <Pane prefHeight="428.0" prefWidth="616.0" style="-fx-background-color: pink;">
             <children>
@@ -169,7 +170,7 @@
                <Button layoutX="520.0" layoutY="13.0" mnemonicParsing="false" onAction="#goHome" style="-fx-background-color: pink; -fx-border-color: coral;" text="Check-out" textFill="#242524" />
             </children></Pane>
       </children>
-   </VBox>
+   </StackPane>
 
    <VBox fx:id="homePage" alignment="CENTER" spacing="15" style="-fx-background-color: pink;" visible="false">
       <Label fx:id="welcomeText" text="Welcome To Cosmetology">
@@ -180,8 +181,8 @@
       <ImageView fx:id="imageFirst" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="descriptionCosmo" text="Please Choose one:" />
       <HBox alignment="CENTER" spacing="20">
-         <Button fx:id="checkIn" onAction="#goToConsent" style="-fx-background-color: light-pink; -fx-border-color: CORAL; -fx-border-style: 18px;" text="Checking-In" />
-         <Button fx:id="checkOut" onAction="#goToFeedback" style="-fx-background-color: light-pink; -fx-border-color: CORAl;" text="Checking-Out" />
+         <Button fx:id="checkIn" onAction="#goToConsent" style="-fx-background-color: #FFB6C1; -fx-border-color: CORAL; -fx-border-width: 18px;" text="Checking-In" />
+         <Button fx:id="checkOut" onAction="#goToFeedback" style="-fx-background-color: #FFB6C1; -fx-border-color: CORAl;" text="Checking-Out" />
       </HBox>
    </VBox>
 
