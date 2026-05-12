@@ -9,8 +9,8 @@
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cosmoform.HelloController">
 
 
-///  This page asks what kind of services are you getting done
-/// Then you choose the box based on which service will be done
+<!--///  This page asks what kind of services are you getting done-->
+<!--/// Then you choose the box based on which service will be done-->
    <VBox fx:id="servicesPage" alignment="CENTER" spacing="10" style="-fx-background-color: pink;">
       <Pane prefHeight="362.0" prefWidth="600.0">
          <children>
@@ -22,7 +22,7 @@
                <CheckBox text="Color" wrapText="true" />
                <CheckBox text="Haircut / Style" wrapText="true"/>
                <CheckBox text="Nails" wrapText="true"/>
-               ///Waxing checkbox takes the client into the next page which is the waxing waiver page
+<!--               ///Waxing checkbox takes the client into the next page which is the waxing waiver page-->
                <CheckBox onAction="#goToWaxing" text="Waxing" wrapText="true"/>
                <CheckBox text="Other Services" wrapText="true"/>
             </VBox>
@@ -101,6 +101,7 @@
             </children></Pane>
       </children>
    </VBox>
+    <VBox fx:id="feedbackPage" prefHeight="200.0" prefWidth="100.0" visible="false">
       <children>
          <Pane prefHeight="428.0" prefWidth="616.0" style="-fx-background-color: pink;">
             <children>
@@ -170,8 +171,7 @@
                <Button layoutX="520.0" layoutY="13.0" mnemonicParsing="false" onAction="#goHome" style="-fx-background-color: pink; -fx-border-color: coral;" text="Check-out" textFill="#242524" />
             </children></Pane>
       </children>
-   </StackPane>
-
+    </VBox>
    <VBox fx:id="homePage" alignment="CENTER" spacing="15" style="-fx-background-color: pink;" visible="false">
       <Label fx:id="welcomeText" text="Welcome To Cosmetology">
          <font>
