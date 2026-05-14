@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cosmo.fxml"));
         Parent root = fxmlLoader.load();
-        Scene mainScene = new Scene(root, 1280, 720);
+        Scene mainScene = new Scene(root, 1920,1024);
 
         stage.setTitle("Cosmotology");
         stage.setScene(mainScene);
