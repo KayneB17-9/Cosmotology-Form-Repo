@@ -116,12 +116,12 @@ public class HelloController {
         feedbackPage.setVisible(true);
         feedbackPage.setManaged(true);
     }
-    
+
     @FXML
     private void goToWaxing(){
         servicesPage.setVisible(false);
         servicesPage.setManaged(false);
-        
+
         waxingWaiver.setVisible(true);
         waxingWaiver.setManaged(true);
     }
@@ -170,6 +170,3 @@ public class HelloController {
         feedbackPage.setManaged(false);
     }
 }
-
-
-
