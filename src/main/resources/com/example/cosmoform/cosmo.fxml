@@ -8,21 +8,45 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cosmoform.HelloController">
 
+   <VBox fx:id="homePage" alignment="CENTER" spacing="15" visible="false">
+      <Label fx:id="welcomeText" text="Welcome To Cosmetology">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageFirst" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="descriptionCosmo" text="Welcome to the six seven page" />
+      <HBox alignment="CENTER" spacing="20">
+         <Button fx:id="checkIn" onAction="#goToConsent" text="Checking-In" />
+         <Button fx:id="checkOut" onAction="#goToFeedback" text="Checking-Out" />
+      </HBox>
+   </VBox>
 
 
-   <VBox fx:id="servicesPage" alignment="CENTER" spacing="10" style="-fx-background-color: pink;" visible="false">
+
+   <VBox fx:id="servicesPage" alignment="CENTER" spacing="10" visible="false" managed="false">
       <Pane prefHeight="362.0" prefWidth="600.0">
          <children>
-            <Label fx:id="schoolName" layoutX="11.0" layoutY="6.0" prefWidth="174.0" text="Worcester Technical High School" />
+            <VBox alignment="CENTER_LEFT" layoutX="217.0" layoutY="125.0" maxWidth="200" prefHeight="244.0" prefWidth="200.0" spacing="8">
+               <CheckBox text="Perm" wrapText="true" />
+               <CheckBox text="Color" wrapText="true" />
+               <CheckBox text="Haircut / Style" wrapText="true" />
+               <CheckBox text="Nails" wrapText="true" />
+<!--               ///Waxing checkbox takes the client into the next page which is the waxing waiver page-->
+               <CheckBox onAction="#goToWaxing" text="Waxing" wrapText="true" />
+               <CheckBox text="Other Services" wrapText="true" />
+
+            <Label fx:id="schoolName" layoutX="11.0" layoutY="6.0" text="Worcester Technical High School" />
             <Label fx:id="bruh1" layoutX="11.0" layoutY="23.0" text="1 Officer Manny Familia Way" />
             <Label fx:id="bruh2" layoutX="14.0" layoutY="40.0" text="Worcester, MA 01605" />
             <VBox alignment="CENTER_LEFT" layoutX="217.0" layoutY="125.0" maxWidth="200" prefHeight="244.0" prefWidth="200.0" spacing="8">
-               <CheckBox style="-fx-skin: pink;" text="Perm" wrapText="true" />
+               <CheckBox text="Perm" />
                <CheckBox text="Color" />
                <CheckBox text="Haircut / Style" />
                <CheckBox text="Nails" />
                <CheckBox onAction="#goToWaxing" text="Waxing" />
                <CheckBox text="Other Services" />
+
             </VBox>
             <Label layoutX="105.0" layoutY="90.0" text="What Are You Getting Done Today?">
                <font>
@@ -31,43 +55,94 @@
             </Label>
          </children></Pane>
 
-               <Button onAction="#goHome" text="Continue" />
-   </VBox>
+        <Pane prefHeight="362.0" prefWidth="600.0">
 
-   <VBox fx:id="consentPage" alignment="CENTER" spacing="10" visible="false">
+            <children>
+
+                <Label fx:id="schoolName"
+                       layoutX="11.0"
+                       layoutY="6.0"
+                       text="Worcester Technical High School" />
+
+                <Label fx:id="bruh1"
+                       layoutX="11.0"
+                       layoutY="23.0"
+                       text="1 Officer Manny Familia Way" />
+
+                <Label fx:id="bruh2"
+                       layoutX="14.0"
+                       layoutY="40.0"
+                       text="Worcester, MA 01605" />
+
+                <VBox alignment="CENTER_LEFT"
+                      layoutX="217.0"
+                      layoutY="125.0"
+                      maxWidth="200"
+                      prefHeight="244.0"
+                      prefWidth="200.0"
+                      spacing="8">
+
+                    <CheckBox text="Perm" />
+                    <CheckBox text="Color" />
+                    <CheckBox text="Haircut / Style" />
+                    <CheckBox text="Nails" />
+                    <CheckBox onAction="#goToWaxing" text="Waxing" />
+                    <CheckBox text="Other Services" />
+
+                </VBox>
+
+                <Label layoutX="105.0"
+                       layoutY="90.0"
+                       text="What Are You Getting Done Today?">
+
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+
+                </Label>
+
+            </children>
+
+        </Pane>
+
+        <Button onAction="#goHome" text="Continue" />
+
+    </VBox>
+
+   <VBox fx:id="consentPage" alignment="CENTER" spacing="10" visible="false" managed="false">
       <Pane prefHeight="416.0" prefWidth="600.0">
          <children>
-      
+
             <Label fx:id="validation" layoutX="133.0" layoutY="219.0" text="Charge for materials used only, no charge for services." textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-      
-            <Label fx:id="disclaimerAll" layoutX="62.0" layoutY="61.0" text="All Work In This School Is Done By Students">
+
+            <Label fx:id="disclaimerAll" layoutX="69.0" layoutY="94.0" text="All Work In This School Is Done By Students">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-      
-            <Label layoutX="50.0" layoutY="107.0" maxWidth="500" text="I recognize that students are performing the work done in this school and will be monitored by a licensed instructor. Therefore your patience and support is appreciated." textAlignment="CENTER" wrapText="true">
+
+            <Label layoutX="50.0" layoutY="140.0" maxWidth="500" text="I recognize that students are performing the work done in this school and will be monitored by a licensed instructor. Therefore your patience and support is appreciated." textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-      
+
             <Button layoutX="30.0" layoutY="26.0" onAction="#goHome" text="Back" />
-            <Label layoutX="78.0" layoutY="249.0" text="Client Print Name:" />
-            <TextField fx:id="clientName" layoutX="181.0" layoutY="245.0" prefHeight="25.0" prefWidth="238.0" />
-            <Label layoutX="50.0" layoutY="299.0" text="Client Print Signature:" />
-            <TextField fx:id="clientSignature" layoutX="174.0" layoutY="295.0" />
-            <TextField fx:id="date" layoutX="397.0" layoutY="295.0" prefHeight="25.0" prefWidth="80.0" />
-            <Label layoutX="362.0" layoutY="299.0" text="Date:" />
+            <Label layoutX="85.0" layoutY="299.0" text="Client Print Name:" />
+            <TextField fx:id="clientName" layoutX="190.0" layoutY="295.0" prefHeight="25.0" prefWidth="238.0" />
+            <Label layoutX="50.0" layoutY="345.0" text="Client Print Signature:" />
+            <TextField fx:id="clientSignature" layoutX="171.0" layoutY="341.0" />
+            <TextField fx:id="date" layoutX="396.0" layoutY="341.0" prefHeight="25.0" prefWidth="80.0" />
+            <Label layoutX="361.0" layoutY="345.0" text="Date:" />
             <Button layoutX="524.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToServices" text="Next" />
          </children>
       </Pane>
    </VBox>
-   <VBox fx:id="waxingWaiver" prefHeight="200.0" prefWidth="100.0" visible="false">
+   <VBox fx:id="waxingWaiver" prefHeight="200.0" prefWidth="100.0" visible="false" managed="false">
       <children>
          <Pane prefHeight="433.0" prefWidth="600.0">
             <children>
@@ -99,9 +174,9 @@
             </children></Pane>
       </children>
    </VBox>
-   <VBox fx:id="feedbackPage" prefHeight="440.0" prefWidth="600.0">
+   <VBox fx:id="feedbackPage" prefHeight="440.0" prefWidth="600.0" visible="false" managed="false">
       <children>
-         <Pane prefHeight="428.0" prefWidth="616.0" style="-fx-background-color: pink;">
+         <Pane prefHeight="428.0" prefWidth="616.0">
             <children>
                <Label layoutX="27.0" layoutY="17.0" text="Client Name: " />
                <Label fx:id="clientFeedbackName" layoutX="106.0" layoutY="17.0" prefHeight="17.0" prefWidth="222.0" text="Placeholder for client's name" />
@@ -159,30 +234,16 @@
                <CheckBox layoutX="467.0" layoutY="327.0" mnemonicParsing="false" />
                <CheckBox layoutX="527.0" layoutY="327.0" mnemonicParsing="false" />
                <Label layoutX="38.0" layoutY="369.0" text="Additional Comments: " />
-               <TextField layoutX="160.0" layoutY="360.0" prefHeight="35.0" prefWidth="413.0" />
+               <TextField fx:id="feedbackInput" layoutX="160.0" layoutY="360.0" prefHeight="35.0" prefWidth="413.0" />
                <Line endX="374.5" endY="-6.0" layoutX="173.0" layoutY="138.0" startX="-141.5" startY="-6.0" />
                <Line endX="374.5" endY="-6.0" layoutX="177.0" layoutY="170.0" startX="-141.5" startY="-6.0" />
                <Line endX="374.5" endY="-6.0" layoutX="177.0" layoutY="285.0" startX="-141.5" startY="-6.0" />
                <Line endX="374.5" endY="-6.0" layoutX="181.0" layoutY="250.0" startX="-141.5" startY="-6.0" />
                <Line endX="374.5" endY="-6.0" layoutX="180.0" layoutY="323.0" startX="-141.5" startY="-6.0" />
                <Line endX="374.5" endY="-6.0" layoutX="180.0" layoutY="206.0" startX="-141.5" startY="-6.0" />
-               <Button layoutX="520.0" layoutY="13.0" mnemonicParsing="false" onAction="#goHome" style="-fx-background-color: pink; -fx-border-color: coral;" text="Check-out" textFill="#242524" />
+               <Button layoutX="520.0" layoutY="13.0" mnemonicParsing="false" onAction="#submitFeedback" text="Submit" textFill="#242524" />
             </children></Pane>
       </children>
-   </VBox>
-
-   <VBox fx:id="homePage" alignment="CENTER" spacing="15" style="-fx-background-color: pink;" visible="false">
-      <Label fx:id="welcomeText" text="Welcome To Cosmetology">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="imageFirst" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="descriptionCosmo" text="Please Choose one:" />
-      <HBox alignment="CENTER" spacing="20">
-         <Button fx:id="checkIn" onAction="#goToConsent" style="-fx-background-color: light-pink; -fx-border-color: CORAL; -fx-border-style: 18px;" text="Checking-In" />
-         <Button fx:id="checkOut" onAction="#goToFeedback" style="-fx-background-color: light-pink; -fx-border-color: CORAl;" text="Checking-Out" />
-      </HBox>
    </VBox>
 
 </StackPane>

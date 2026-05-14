@@ -12,7 +12,7 @@ public class JdbcDao {
 
     private static final String INSERT_Client = "INSERT INTO Client_Waiver (FirstName_LastName," +
             " Signdate) VALUES (?,?)";
-    private static final String INSERT_Feedback = "INSERT INTO Feedback (FirstName_LastName" +
+    private static final String INSERT_Feedback = "INSERT INTO Feedback (FirstName_LastName," +
             "Feedback_Answer) VALUES (?,?)";
     private static final String INSERT_Waiver = "INSERT INTO Waxing_Waiver (Answer, Date_Now," +
             " FirstName_LastName) VALUES (?,?,?)";
