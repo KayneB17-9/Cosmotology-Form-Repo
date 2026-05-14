@@ -27,7 +27,6 @@
    <VBox fx:id="servicesPage" alignment="CENTER" spacing="10" visible="false" managed="false">
       <Pane prefHeight="362.0" prefWidth="600.0">
          <children>
-<<<<<<< HEAD
             <VBox alignment="CENTER_LEFT" layoutX="217.0" layoutY="125.0" maxWidth="200" prefHeight="244.0" prefWidth="200.0" spacing="8">
                <CheckBox text="Perm" wrapText="true" />
                <CheckBox text="Color" wrapText="true" />
@@ -36,7 +35,7 @@
 <!--               ///Waxing checkbox takes the client into the next page which is the waxing waiver page-->
                <CheckBox onAction="#goToWaxing" text="Waxing" wrapText="true" />
                <CheckBox text="Other Services" wrapText="true" />
-=======
+
             <Label fx:id="schoolName" layoutX="11.0" layoutY="6.0" text="Worcester Technical High School" />
             <Label fx:id="bruh1" layoutX="11.0" layoutY="23.0" text="1 Officer Manny Familia Way" />
             <Label fx:id="bruh2" layoutX="14.0" layoutY="40.0" text="Worcester, MA 01605" />
@@ -47,7 +46,7 @@
                <CheckBox text="Nails" />
                <CheckBox onAction="#goToWaxing" text="Waxing" />
                <CheckBox text="Other Services" />
->>>>>>> 914708c5458ccedf78cdfd029cb963936bdd9027
+
             </VBox>
             <Label layoutX="105.0" layoutY="90.0" text="What Are You Getting Done Today?">
                <font>
