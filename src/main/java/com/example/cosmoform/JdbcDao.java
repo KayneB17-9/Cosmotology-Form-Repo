@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class JdbcDao {
-    private static final String DATABASE_URL = "jdbc:mysql://127.0.0.2:3306/forum_shirts?useSSL=false";
+    private static final String DATABASE_URL = "jdbc:mysql://10.72.131.75:3306/cosmo_kiosk?useSSL=false&allowPublicKeyRetrieval=true";
     private static final String DATABASE_USER = "root";
     private static final String DATABASE_PASS = "root";
 
@@ -20,16 +20,18 @@ public class JdbcDao {
 
     public void clientRecord(String Name,String dateOfSignature) throws SQLException {
         //Establishing Connection
+        System.out.println("Inserting client: " + Name + " " + dateOfSignature);
         try (Connection connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USER, DATABASE_PASS);
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_Client)) {
 
             preparedStatement.setString(1, Name);
             preparedStatement.setString(2, dateOfSignature);
 
-            //Executes the query
-            preparedStatement.executeUpdate();
-        } catch (SQLException exception) {
-            printSQLException(exception);
+            int rows = preparedStatement.executeUpdate();
+            System.out.println("Rows inserted: " + rows);
+
+
+
         }
     }
 
@@ -41,11 +43,11 @@ public class JdbcDao {
             preparedStatement.setString(1, Name);
             preparedStatement.setString(2, feedbackAnswer);
 
+            int rows = preparedStatement.executeUpdate();
+            System.out.println("Rows inserted: " + rows);
 
-            //Executes the query
-            preparedStatement.executeUpdate();
-        } catch (SQLException exception) {
-            printSQLException(exception);
+
+
         }
     }
 
@@ -59,10 +61,11 @@ public class JdbcDao {
             preparedStatement.setString(3, Name);
 
 
-            //Executes the query
-            preparedStatement.executeUpdate();
-        } catch (SQLException exception) {
-            printSQLException(exception);
+            int rows = preparedStatement.executeUpdate();
+            System.out.println("Rows inserted: " + rows);
+
+
+
         }
     }
 

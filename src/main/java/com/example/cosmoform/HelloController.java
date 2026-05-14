@@ -149,7 +149,7 @@ public class HelloController {
     }
 
 
-    // ================= OPTIONAL INITIAL SETUP =================
+
 
     @FXML
     public void initialize() {
