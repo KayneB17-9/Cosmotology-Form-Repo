@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc42bdac-9834-4413-b961-f51d5e220de2" name="Changes" comment="im having merge conflicts on comp2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cosmoform/cosmo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cosmoform/cosmo.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
