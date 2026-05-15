@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class JdbcDao {
-    private static final String DATABASE_URL = "jdbc:mysql://10.72.131.75:3306/cosmo_kiosk?useSSL=false&allowPublicKeyRetrieval=true";
+    private static final String DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/cosmo_kiosk?allowPublicKeyRetrieval=true&useSSL=false";
     private static final String DATABASE_USER = "root";
     private static final String DATABASE_PASS = "root";
 
